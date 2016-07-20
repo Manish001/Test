@@ -18,28 +18,30 @@ public class BinarySearch {
 	/**
 	 * @param args
 	 */
+	
 	protected static boolean bSearch(int arr[],int k,int start,int last){
 		int mid = start + ((last - start)/2);
-		System.out.println(mid);
 		if(start > last)
 			return false;
 		
 		else if(k == arr[mid])
 			return true;
 		
-		else if (k >= arr[mid])
-			bSearch(arr, k,mid+1,last);
+		else if (k > arr[mid])
+			return bSearch(arr,k,mid+1,last);
 		else
-			bSearch(arr, k,start,mid-1);
+			return bSearch(arr,k,start,mid-1);
 		
-		return false;
+		
+		
 		
 	}
 	
 	public static void main(String[] args) {
-		int arr[]={1,3,22,3,4,5,6,34,4,655,6,7,8,3,4,5,5,6,7,8,8,10};
+		int arr[]={1,2,3,12,11,12,2,34,3,4,34,5,6,3,4,34,35,45,4,44,334,34,35,3,23,23,242,32,3,343,54,54,54,6,4};
 		Arrays.sort(arr);
-		if(bSearch(arr,34,0,arr.length-1))
+		
+		if(bSearch(arr,35,0,arr.length-1))
 			System.out.println("found");
 	}
 

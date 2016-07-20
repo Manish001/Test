@@ -16,37 +16,52 @@ import java.io.InputStreamReader;
  */
 public class Solution001 {
 
-		private static int Xor1(int x, int y)
+		private static void printNextElement(int arr[], int n)
 		{
-			   return (x | y) & (~x | ~y);
-			//return (x ^ y);
-			}
+		    int next, i, j;
+		    for (i=0; i<n; i++)
+		    {
+		        next = -1;
+		        for (j = i+1; j<n; j++)
+		        {
+		            if (arr[i] < arr[j])
+		            {
+		                next = arr[j];
+		                break;
+		            }
+		        }
+		        System.out.println(arr[i]+" "+ next);
+		    }
+		}
 	
 	   public static void main(String args[] ) throws Exception {
 	       
-	       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	     /*  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	       String line = br.readLine();
 	       String [] st1 = line.split(" ");
-	       int N = Integer.parseInt(st1[0]);
-	       Integer arr [] = new Integer [N];
-	       for (int i = 0; i < N; i++) {
+	       int n = st1.length;
+	       int arr [] = new int [st1.length];
+	       for (int i = 0; i < st1.length; i++) {
 	           arr [i] = Integer.parseInt(br.readLine());
 	       }
+	       */
+		   int arr[]={4,5,2,25};
+		   int n = arr.length;
+	       int next, i, j;
+		    for (i=0; i<n; i++)
+		    {
+		        next = -1;
+		        for (j = i+1; j<n; j++)
+		        {
+		            if (arr[i] < arr[j])
+		            {
+		                next = arr[j];
+		                break;
+		            }
+		        }
+		        System.out.println(next);
+		    }
 	       
-	       int M = Integer.parseInt(st1[1]);
-	       while(M--!=0){
-	    String str [] = br.readLine().split(" ");
-	    Integer a = arr[Integer.parseInt(str[0])-1];
-	    if(Integer.parseInt(str[0])== Integer.parseInt(str[1]))
-	    	System.out.println(a);
-	    else{
-	    for(int j = Integer.parseInt(str[0]); j <(Integer.parseInt(str[1])); j++){
-	    	int a1 = arr[j];
-	    	a = Xor1(a,a1) ;
-	    }
-	       System.out.println(a);
-	       }
-	       }
 	   }
-	}
+}
 
