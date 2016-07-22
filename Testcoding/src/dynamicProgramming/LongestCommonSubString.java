@@ -27,7 +27,8 @@ public class LongestCommonSubString {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		str = br.readLine();
-		str1 = br.readLine();
+		//str1 = br.readLine();
+		str1 = new StringBuilder(str).reverse().toString();
 		arr  = new int [str.length()+1][str1.length()+1];
 
 		System.out.println(getLongestCommonSubString(str.length(),str1.length()));
