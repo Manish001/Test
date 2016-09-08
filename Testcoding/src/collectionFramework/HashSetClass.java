@@ -18,10 +18,12 @@ public class HashSetClass {
 }
 
 
-/*Methods are add(),
+/*
+ * Methods are add(),
  * remove(),
  * clear,
  * contains(),
  * isEmpty,
- * size
+ * size(),
+ * 
  */

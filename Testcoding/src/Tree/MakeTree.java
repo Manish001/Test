@@ -36,7 +36,7 @@ public class MakeTree {
 		System.out.println("---------------------------------------------");
 		Traversal.postOrder(mk.root);
 		System.out.println("---------------------------------------------");
-		
+		PrintPathToLeaf.printPath(mk.root);
 	}
 
 	public  void addNode(int a){
