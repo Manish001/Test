@@ -24,7 +24,7 @@ class  SuperClass{
 }
 
 class SubClass extends SuperClass{
-    protected  byte doStuff( byte byteValue) throws Exception{
-    return (byte) (byteValue * 3 );
-    }
+   // protected  byte doStuff( byte byteValue) throws Exception{
+   // return (byte) (byteValue * 3 );
+   // }
 }
